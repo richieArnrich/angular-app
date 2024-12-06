@@ -13,12 +13,35 @@
       }}
     </p>
   </div>
+  <div class="col-3">{{ selectedState }}</div>
 </div>
 <div class="row">
   <div class="col-3">
     <input type="text" [value]="firstName" class="form-control" />
   </div>
-  <div class="col">
+  <div class="col-3">
+    <input type="text" [(ngModel)]="firstName" class="form-control" />
+  </div>
+  <div class="col-3">
     <input [type]="inputType" />
+  </div>
+  <div class="col-3">
+    <select name="" id="" [(ngModel)]="selectedState">
+      <option value="MH">MH</option>
+      <option value="KA">KA</option>
+      <option value="GA">GA</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showWelcomeAlert()">
+      Show Alert
+    </button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-success" (click)="showMessage('Welcome to my app')">
+      Show Message
+    </button>
   </div>
 </div>

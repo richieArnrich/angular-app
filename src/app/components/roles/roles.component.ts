@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-roles',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './roles.component.html',
   styleUrl: './roles.component.css',
 })
@@ -15,4 +16,12 @@ export class RolesComponent {
   myName: string = 'Richie Arnold';
   myAge: number = 20;
   inputType: string = 'radio';
+  selectedState: string = '';
+
+  showWelcomeAlert() {
+    alert('Welcome to our application');
+  }
+  showMessage(message: string) {
+    alert(message);
+  }
 }
