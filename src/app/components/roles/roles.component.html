@@ -45,3 +45,35 @@
     </button>
   </div>
 </div>
+<div class="row">
+  <div class="col-4">
+    <ul>
+      <li *ngFor="let item of roleList">{{ item.role }}</li>
+    </ul>
+  </div>
+  <div class="col-4">
+    <select name="" id="">
+      <option [value]="role.roleId" *ngFor="let role of roleList">
+        {{ role.role }}
+      </option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <table class="table table-bordered">
+      <tr>
+        <thead>
+          <th>Sl No</th>
+          <th>Role Name</th>
+        </thead>
+      </tr>
+      <tbody>
+        <tr *ngFor="let role of roleList; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ role.role }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
