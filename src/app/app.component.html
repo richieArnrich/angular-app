@@ -1,1 +1,38 @@
-<app-master></app-master>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/master" routerLinkActive="active"
+          >Master
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/employee'" routerLinkActive="active"
+          >Employee</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/client" routerLinkActive="active"
+          >Client</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <app-master></app-master> -->
+<div class="container pt-1">
+  <router-outlet></router-outlet>
+</div>
